@@ -1,0 +1,64 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+*.local.env
+*.session.json
+
+# Python/cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor files
+.idea/
+.vscode/
+
+# Local browser/session state
+browser_sessions/
+
+# Local inputs and generated data
+*.xlsx
+*.xls
+*.csv
+*.jsonl
+search.json
+companies_enriched.*
+
+# Runtime and generated outputs
+output/
+output_*/
+output*/
+calibration_runs/
+runtime_local/
+.orchestrator/
+
+# Private local notes
+AGENTS.md
+**/AGENTS.md
+docs/
+*_GUIDE.md
+*_ROADMAP.md
+*_SUMMARY.md
+*_TASK_TEMPLATE.md
+*_WORKFLOW.md
+*_NOTES/
+
+# Temporary files
+tmp/
+tmp_debug_prefetch/
+.tmp_er_r6state_*
+.tmp_er_r6state_*/
+.tmp_validation_*
+.tmp_validation_*/
+.tmp_tz_*.stdout.log
+.tmp_tz_*.stderr.log
+_tmp_ocr_test.pdf
+*.log
+
+# Generated local assets
+app/discovery/data/moscow_geo_lookup.json

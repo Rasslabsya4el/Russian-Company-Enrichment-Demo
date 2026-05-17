@@ -1,0 +1,14 @@
+# Generated and local runtime artifacts
+runtime_local/**
+.orchestrator/**
+docs/**
+*_NOTES/**
+AGENTS.md
+**/AGENTS.md
+output/**
+output_*/**
+calibration_runs/**
+.pytest_cache/**
+**/__pycache__/**
+**/*.sqlite
+**/*.log

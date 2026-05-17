@@ -1,0 +1,17 @@
+Public fixture provenance
+
+rar/testfile.rar5.rar
+Source repo: https://github.com/ssokolow/rar-test-files
+Original path: build/testfile.rar5.rar
+
+7z/public_deflate.7z
+Source repo: https://github.com/miurahr/py7zr
+Original path: tests/data/deflate.7z
+
+Locally generated fixtures
+
+7z/sample_bundle.7z
+Built from local smoke sample documents produced by scripts/smoke/run_document_formats_smoke.py.
+
+7z/unsafe_paths.7z
+Built locally to verify path traversal blocking for 7z archive members.
