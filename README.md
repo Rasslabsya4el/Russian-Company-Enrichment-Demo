@@ -6,6 +6,8 @@ The full project turns a company identifier into a caller-ready lead profile: co
 
 `INN` is a Russian Taxpayer ID - a unique company identifier, similar to a national business registration/tax number.
 
+![Company enrichment architecture](assets/company-enrichment-architecture.png)
+
 ## NDA Boundary
 
 This repository is a sanitized demo.
@@ -86,37 +88,6 @@ The deep pass can inspect contacts, about pages, production pages, procurement p
 The runtime is not a linear scraper.
 
 Every scraping point and every pipeline stage reports into one central writer. Worker counts are configurable per stage.
-
-```text
-Input workbook
-  INN / company name / hints
-        |
-        v
-Runtime scheduler
-  creates row work + stage work
-        |
-        v
-Access layer
-  sessions + proxy rotation + captcha handling
-        |
-        v
-Parallel worker pools
-  company data aggregators          \
-  tender/procurement platforms       \
-  website discovery                   \
-  official-site verification           >  Central writer / state store
-  deep website parsing                /   every stage sends events immediately
-  documents + OCR                    /
-  LLM review / scoring helpers      /
-        |
-        v
-Live company state
-  progress + evidence + errors + resume data
-        |
-        v
-Final outputs
-  caller workbook + evidence links + company dossier
-```
 
 The central writer receives structured events:
 
